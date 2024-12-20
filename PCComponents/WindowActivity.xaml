@@ -1,0 +1,121 @@
+﻿<Window x:Class="PCComponents.WindowActivity"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PCComponents"
+        mc:Ignorable="d"
+        Title="PCComponents v0.0.1" Height="600" Width="1200" ResizeMode="CanMinimize">
+
+    <Grid x:Name="Grid2" Background="#FF052659">
+        <MediaElement Source="backpcc.mp4" Width="1920" Height="1080"/>
+        <Border Width="150" Height="125" Margin="15,35,0,0" 
+    HorizontalAlignment="Left" VerticalAlignment="Top" 
+    Background="#5483B3" CornerRadius="10">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="70" ShadowDepth="0" Color="#FF00F9FF" Direction="315" RenderingBias="Performance"/>
+            </Border.Effect>
+            <Grid>
+            </Grid>
+        </Border>
+        <Border Width="600" Height="180" Margin="350,350,0,0" 
+        HorizontalAlignment="Left" VerticalAlignment="Top" 
+        Background="#5483B3" CornerRadius="10">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="70" ShadowDepth="0" Color="#FF00F9FF" Direction="315" RenderingBias="Performance"/>
+            </Border.Effect>
+            <Grid>
+            </Grid>
+        </Border>
+
+        <RadioButton x:Name="CPU" Content="CPU" HorizontalAlignment="Left" Margin="20,40,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Background="#FFC1E8FF" Checked="RadioButton_Checked" Foreground="#FFC1E8FF"/>
+        <RadioButton x:Name="GPU" Content="GPU" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Background="#FFC1E8FF" Checked="RadioButton_Checked" Foreground="#FFC1E8FF"/>
+        <RadioButton x:Name="RAM" Content="RAM" HorizontalAlignment="Left" Margin="20,80,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Background="#FFC1E8FF" Checked="RadioButton_Checked" Foreground="#FFC1E8FF"/>
+        <RadioButton x:Name="MOTHERBOARD" Content="MOTHERBOARD" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Background="#FFC1E8FF" Grid.ColumnSpan="3" Checked="RadioButton_Checked" Foreground="#FFC1E8FF"/>
+        <RadioButton x:Name="STORAGE" Content="STORAGE" HorizontalAlignment="Left" Margin="20,120,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Background="#FFC1E8FF" Grid.ColumnSpan="3" Checked="RadioButton_Checked" Foreground="#FFC1E8FF"/>
+        <RadioButton x:Name="POWERUNIT" Content="POVER UNIT" HorizontalAlignment="Left" Margin="20,140,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Background="#FFC1E8FF" Grid.ColumnSpan="2" Checked="RadioButton_Checked" Foreground="#FFC1E8FF"/>
+
+        <Border CornerRadius="10" Background="#FF5483B3" Margin="350,40,40,250" Grid.Column="2">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="70" ShadowDepth="0" Color="#FF00F9FF" Direction="315" RenderingBias="Performance"/>
+            </Border.Effect>
+            <ListBox Name="ListBox" ItemsSource="{Binding ComponentsList}" 
+         SelectionChanged="ListBox_SelectionChanged"
+         Foreground="#FFC1E8FF"
+         Background="Transparent" BorderThickness="0" BorderBrush="{x:Null}" 
+         FontFamily="Arial Black" Width="810" Height="300">
+            </ListBox>
+        </Border>
+
+
+
+        <Label x:Name="label1" Content="CPU:" Margin="350,350,0,0" FontFamily="Arial Black" Foreground="#FFC1E8FF" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="GPU:" HorizontalAlignment="Left" Margin="350,380,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Foreground="#FFC1E8FF" />
+        <Label x:Name="label3" Content="RAM:" HorizontalAlignment="Left" Margin="350,410,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Foreground="#FFC1E8FF" />
+        <Label x:Name="label4" Content="MOTHERBOARD:" HorizontalAlignment="Left" Margin="350,440,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Foreground="#FFC1E8FF" />
+        <Label x:Name="label5" Content="STORAGE:" HorizontalAlignment="Left" Margin="350,470,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Foreground="#FFC1E8FF" />
+        <Label x:Name="label6" Content="POWER UNIT:" HorizontalAlignment="Left" Margin="350,500,0,0" FontFamily="Arial Black" Foreground="#FFC1E8FF" Height="24" VerticalAlignment="Top" />
+
+        <Label x:Name="TimeLabel" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="Arial Black" FontSize="36" Margin="30,0,0,30" Height="63" Width="260" FontWeight="Bold" Foreground="#FFC1E8FF">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="70" ShadowDepth="0" Color="#FF00F9FF" Direction="315" RenderingBias="Performance"/>
+            </Label.Effect>
+        </Label>
+
+        <Button Content="Settings" HorizontalAlignment="Left" Margin="20,225,0,0" Foreground="#FFC1E8FF" 
+    VerticalAlignment="Top" FontFamily="Arial Black" Click="OpenAddWindow" Width="150" Height="25" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Top">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="70" ShadowDepth="0" Color="#FF00F9FF" Direction="315" RenderingBias="Performance"/>
+            </Button.Effect>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="10" Background="#5483B3" BorderThickness="1">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button Content="Reset configuration" HorizontalAlignment="Left" Margin="20,260,0,0" Foreground="#FFC1E8FF"
+    VerticalAlignment="Top" FontFamily="Arial Black" Click="ButtonReset" Width="200" Height="25">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="70" ShadowDepth="0" Color="#FF00F9FF" Direction="315" RenderingBias="Performance"/>
+            </Button.Effect>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="10" Background="#5483B3" BorderThickness="1">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button Content="Checking the configuration" HorizontalAlignment="Left" Margin="20,295,0,0" Foreground="#FFC1E8FF"
+    VerticalAlignment="Top" FontFamily="Arial Black" Click="CheckSovmestimosti" Width="250" Height="25">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="70" ShadowDepth="0" Color="#FF00F9FF" Direction="315" RenderingBias="Performance"/>
+            </Button.Effect>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="10" Background="#5483B3" BorderThickness="1">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="Info" HorizontalAlignment="Left" Margin="20,190,0,0" Foreground="#FFC1E8FF"
+                VerticalAlignment="Top" FontFamily="Arial Black" Click="PCInfo" Width="100" Height="25">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="70" ShadowDepth="0" Color="#FF00F9FF" Direction="315" RenderingBias="Performance"/>
+            </Button.Effect>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="10" Background="#5483B3" BorderThickness="1">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label Content="PCComponents version 0.0.1 by Kay0sHiiヅ" Foreground="#FFC1E8FF" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="374" Height="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="14" FontStyle="Italic" FontFamily="Arial Black"/>
+    </Grid>
+</Window>

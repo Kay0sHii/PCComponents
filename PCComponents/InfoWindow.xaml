@@ -1,0 +1,31 @@
+﻿<Window x:Class="PCComponents.InfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PCComponents"
+        mc:Ignorable="d"
+        Title="InfoWindow" Height="500" Width="800" ResizeMode="CanMinimize">
+    <Grid>
+        <TextBlock TextWrapping="Wrap" Width="750" Height="450">
+            <Run FontSize="16" Foreground="Red" FontWeight="Bold" FontStyle="Italic">CPU :</Run> <LineBreak />
+            <Run FontSize="14" Foreground="Black" TextDecorations="Underline">• Процессор (микропроцессор, CPU) – находится на системной плате, отвечает за математическую и логическую обработку команд, данных, управление другими комплектующими. За его производительность и скорость работы отвечает два параметра – разрядность и тактовая частота. Чем эти показатели выше, чем более мощным он будет.</Run> <LineBreak />
+            
+            <Run FontSize="16" Foreground="Red" FontWeight="Bold" FontStyle="Italic">GPU :</Run> <LineBreak />
+            <Run FontSize="14" Foreground="Black" TextDecorations="Underline">• Видеокарта (GPU) – преобразует графический образ, который хранится в памяти адаптера или ПК в пригодную для вывода на экран форму.</Run> <LineBreak />
+            
+            <Run FontSize="16" Foreground="Red" FontWeight="Bold" FontStyle="Italic">RAM :</Run> <LineBreak />
+            <Run FontSize="14" Foreground="Black" TextDecorations="Underline">• Оперативная память (RAM) — в большинстве случаев энергозависимая часть системы компьютерной памяти, в которой во время работы компьютера хранится выполняемый машинный код (программы), а также входные, выходные и промежуточные данные, обрабатываемые процессором.</Run> <LineBreak />
+            
+            <Run FontSize="16" Foreground="Red" FontWeight="Bold" FontStyle="Italic">MOTHERBOARD :</Run> <LineBreak />
+            <Run FontSize="14" Foreground="Black" TextDecorations="Underline">• Материнская плата – обеспечивает связь внутренних компонентов с периферийными устройствами. К материнке через специальные разъемы (порты) подключаются процессор, контроллеры, микросхемы памяти, математический сопроцессор, генератор тактовых импульсов, сетевая и аудиокарты, видеоадаптер и пр.</Run> <LineBreak />
+            
+            <Run FontSize="16" Foreground="Red" FontWeight="Bold" FontStyle="Italic">STORAGE :</Run> <LineBreak />
+            <Run FontSize="14" Foreground="Black" TextDecorations="Underline">• Накопителем называют устройство для хранения информации. Используется в персональных компьютерах, ноутбуках, системах видеонаблюдения. В отличие от оперативной памяти работает медленнее, но отличается большим объемом памяти и надежностью. Бывают двух типов SSD b HDD.</Run> <LineBreak />
+            
+            <Run FontSize="16" Foreground="Red" FontWeight="Bold" FontStyle="Italic">POVER UNIT :</Run> <LineBreak />
+            <Run FontSize="14" Foreground="Black" TextDecorations="Underline">• Блок питания – обеспечивает энергией все компоненты, находящиеся внутри корпуса. Его необходимая мощность рассчитывается исходя из суммарного потребления всеми узлами.</Run> <LineBreak />
+        </TextBlock>
+
+    </Grid>
+</Window>

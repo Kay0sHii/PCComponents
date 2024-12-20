@@ -32,7 +32,7 @@ namespace PCComponents
         {
             InitializeComponent();
 
-            DispatcherTimer timer = new DispatcherTimer // Настройка таймера для обновления времени каждую секунду
+            DispatcherTimer timer = new DispatcherTimer // Настройка таймера для обновления времени каждую секундучускенгшщз
             {
                 Interval = TimeSpan.FromSeconds(1)
             };
@@ -42,7 +42,7 @@ namespace PCComponents
 
             DataContext = this;  // Привязываем данные к интерфейсу
 
-            LabelLoaded(); // Загрузка Того что было в Lable на случай несанкционированного закрытия
+            LabelLoaded(); // Загрузка Того что было в Lable на случай несанкционированного закрытия qweg
         }
 
         private void Timer_Tick(object sender, EventArgs e) // При каждом тике обновляються данные в TimeLabel
